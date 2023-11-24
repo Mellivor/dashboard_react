@@ -1,0 +1,31 @@
+.header{
+  background-color: rgb(81, 123, 137);
+  border-radius: 7px;
+  padding: 4px 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.nav{
+  display: flex;
+  margin: 0px 10px;
+  justify-content: space-between;
+  color: rgb(231, 6, 74);
+  align-items: center;
+}
+.linnks {
+  transition: 800ms;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: 'Special Elite', cursive;
+  font-size: 22px;
+  display: block;
+  padding: 4px;
+}
+.active{
+  transition: 800ms;
+  color: rgb(5, 42, 58);
+  font-weight: 200;
+  
+}

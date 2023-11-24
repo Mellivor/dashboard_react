@@ -1,0 +1,19 @@
+.posts_wrapper{
+  margin: 10px 0px 0px 0px;
+  color: rgb(255, 255, 255);
+}
+.posts_wrapper_myposts{
+  margin: 0px 0px 8px 0px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.posts_wrapper_textarea{
+  width: 98%;
+  height: 55px;
+  resize: none;
+}
+.posts_wrapper_button{
+  display: flex;
+  justify-content: flex-end;
+}
+

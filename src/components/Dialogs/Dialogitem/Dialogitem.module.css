@@ -1,0 +1,26 @@
+.item {
+margin: 0px 0px 0px 4%;
+display: flex;
+}
+.contlinc{
+  transition: 200ms;
+  text-decoration: none;
+  color: rgb(5, 42, 58);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.avatar img{
+ 
+ border-radius: 20px;
+ width: 30px;
+ height: 30px;
+}
+.text{
+  padding: 0px 0px 0px 2% ;
+}
+
+.active{
+  transition: 400ms;
+  font-weight: 900;
+}

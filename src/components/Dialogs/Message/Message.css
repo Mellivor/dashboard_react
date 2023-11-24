@@ -1,0 +1,30 @@
+.you{
+padding: 5px;
+
+font-size: 18px;
+background-color: rgb(25, 173, 184);
+display: flex;
+border-radius: 5px;
+}
+.him{
+
+padding: 5px;
+font-size: 18px;
+background-color: rgb(25, 62, 184);
+position: left;
+justify-content: flex-end;
+border-radius: 5px;
+}
+.him.avatar{
+    
+}
+
+.avatar img{
+ 
+ border-radius: 20px;
+ width: 30px;
+ height: 30px;
+}
+.message_text{
+    padding: 0px 2%;
+}

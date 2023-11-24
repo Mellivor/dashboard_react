@@ -1,0 +1,39 @@
+.dialogs{
+display: flex;
+border-radius: 7px;
+overflow: hidden;
+color: rgb(5, 42, 58);
+flex-grow: 10;
+height: 100%;
+}
+.items{
+flex-grow: 1;
+background-color: #fff;
+border-radius: 4px;
+}
+
+.separator{
+width: 6px;
+}
+
+h2{
+    margin: 0px 0px 1% 3%;
+}
+.messages{
+flex-grow: 2;
+background-color: #fff;
+border-radius: 4px;
+align-items: flex-start;
+}
+.friends{
+    margin: 0px 0px 3% 0px;
+}
+.textarea{
+  width: 98%;
+  height: 55px;
+  resize: none;
+}
+.button{
+  display: flex;
+  justify-content: flex-end;
+}
