@@ -1,0 +1,51 @@
+.form {
+    margin-top: 3.5vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    min-width: 80%;
+    height: 20vh;
+    align-self: flex-end;
+}
+
+.input {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 5px 20px;
+    border: none;
+    height: 40%;
+    border-radius: 5px;
+    /* margin: 1vh 0 1vh 0; */
+    background-color: #4F6C77;
+    color: #EAEEEF;
+    min-width: 70%;
+    resize: none;
+}
+
+.input:focus {
+    border: none;
+    outline: none;
+}
+
+.input::-webkit-scrollbar {
+    width: 12px;
+    /* Adjust the width as needed */
+}
+
+.input::-webkit-scrollbar-thumb {
+    background-color: #9EABB3;
+    border-radius: 3px;
+    /* Change the thumb color */
+}
+
+.input::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Change the track color */
+}
+
+
+.even {
+    align-self: flex-end;
+    background-color: #9EABB3;
+    min-width: 60%;
+}

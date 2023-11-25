@@ -11,6 +11,8 @@ import ErrorPage from "./error-page";
 import News from "./components/News/News";
 import Index from "./routes/index";
 
+
+
 const router = createBrowserRouter([
     {
         path: "/",
