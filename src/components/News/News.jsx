@@ -11,8 +11,8 @@ import PostsForm from './PostForm';
 
 const News = () => {
 
-    // const url = "https://expressmongo.netlify.app/api/posts/";
-    const url = "http://localhost:52488/api/posts";
+    const url = "https://expressmongo.netlify.app/api/posts/";
+    // const url = "http://localhost:52488/api/posts";
     const [getNews, setNews] = useState(null)
     const [showNewsPost, fetchNewPost] = useState(false)
 
@@ -43,7 +43,14 @@ const News = () => {
         <div className={stile.news}>
             {showNewsPost && <PostsForm fetchInfo={fetchInfo} sendPost={sendPost}  ></PostsForm>}
             {getNews && getNews.map((i, ind) => {
-                return <Post key={i._id} url={url} body={i.body} author={i.author} your={true} ind={ind} _id={i._id} userid={i.userid} className="sdfsdf"></Post>
+                return <Post key={i._id}
+                    url={url}
+                    body={i.body}
+                    author={i.author}
+                    your={true}
+                    ind={ind}
+                    _id={i._id}
+                    userid={i.userid}></Post>
             })}
 
             <div className={stile.controlpanel}>

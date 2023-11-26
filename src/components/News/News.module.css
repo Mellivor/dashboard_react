@@ -12,16 +12,20 @@
     line-height: 1.5;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
 
 }
 
 
 .controlpanel {
-    margin-top: 90.1vh;
+    /* margin-top: 90svh; */
     align-self: center;
     position: fixed;
     flex-direction: column;
+    bottom: 0;
 }
 
 .control_buttons {

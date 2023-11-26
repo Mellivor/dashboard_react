@@ -6,7 +6,7 @@ const Header = (props) => {
     return (
         <header className={stl.header}>
             <nav className={stl.nav}>
-                <NavLink to="/"><Logo /></NavLink>
+                {/* <NavLink to="/"><Logo /></NavLink> */}
                 <NavLink className={({ isActive, isPending }) =>
                     isPending ? stl.linnks : isActive ? `${stl.active} ${stl.linnks}` : stl.linnks
                 } to="/news"><div >Новини.</div></NavLink>

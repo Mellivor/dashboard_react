@@ -2,24 +2,34 @@
     color: #EAEEEF;
     font-size: 1.5rem;
     border-radius: 3px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     padding: 0.5rem 0.75rem;
-    flex-direction: column;
-    justify-self: center;
+    /* flex-direction: column; */
+    /* justify-self: center; */
+    margin-bottom: 1vh;
+}
+
+.post_body {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    /* white-space: break-spaces; */
+    max-width: 80%;
 }
 
 .odd {
-    margin: 1vh 0 1vh 0;
-    align-self: flex-start;
+    flex-wrap: wrap;
+    /* margin: 1vh 0 1vh 0; */
+    /* align-self: flex-start; */
     background-color: #A7C4D4;
-    min-width: 70%;
+    /* min-width: 70%; */
+    max-width: 100%
 }
 
 .even {
     align-self: flex-end;
     background-color: #9EABB3;
-    min-width: 60%;
+    /* min-width: 60%; */
 }
 
 .auth {

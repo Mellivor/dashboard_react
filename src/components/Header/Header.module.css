@@ -20,7 +20,8 @@
     text-decoration: none;
     color: #9EABB3;
     font-family: 'Special Elite', cursive;
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: 1.2rem;
     display: block;
     padding: 4px;
 }

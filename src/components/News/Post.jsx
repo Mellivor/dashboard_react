@@ -30,14 +30,14 @@ export default function Posts(props) {
     return (
         <div className={props.ind % 2 ? `${stile.post} ${stile.even}` : `${stile.post} ${stile.odd}`} id={props._id} data-author={props.author} >
             {/* <div className={props.ind % 2 ? `post to` : `post ${stile.odd}`} > */}
-            <p>{props.body}</p>
+            <pre className={stile.post_body}>{props.body}</pre>
             <p className={stile.auth}>{props.author}</p>
             <div>
                 <button>Коментарі</button>
                 {props.your && <button onClick={delatePost}>Видалити</button>}
             </div>
             {props.comments && props.comments.map((i, ind) => {
-                <div key={i.id} className={ind % 2 && "iven"}>
+                return <div key={i.id} className={ind % 2 && "iven"}>
                     <p>{i.author}</p>
                     <p>{i.userid}</p>
                     <p>{i.likes}</p>
