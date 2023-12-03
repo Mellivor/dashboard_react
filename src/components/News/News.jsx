@@ -6,21 +6,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faRetweet } from '@fortawesome/free-solid-svg-icons'
 import PostsForm from './PostForm';
-
+import { usePostsContext } from "./../../hook/usePostsContext";
 
 
 const News = () => {
 
     const url = "https://expressmongo.netlify.app/api/posts/";
     // const url = "http://localhost:52488/api/posts";
-    const [getNews, setNews] = useState(null)
+    const { posts, dispatch } = usePostsContext()
+    // const [getNews, setNews] = useState(null)
     const [showNewsPost, fetchNewPost] = useState(false)
 
     const fetchInfo = async () => {
         try {
             const respons = await axios.get(url)
             console.log(respons.data);
-            setNews(respons.data)
+            dispatch({ type: 'SET_POSTS', payload: respons.data })
+            // setNews(respons.data)
         } catch (error) {
             console.log(error.mesage);
         }
@@ -28,8 +30,10 @@ const News = () => {
 
     const sendPost = async (post, fetchInfo) => {
         try {
-            await axios.post(url, { body: post })
-            await fetchInfo()
+            const newPost = await axios.post(url, { body: post })
+            // await fetchInfo()
+            console.log(newPost);
+            dispatch({ type: 'CREATE_POST', payload: newPost.data })
         } catch (error) {
             console.log(error.mesage);
         }
@@ -42,7 +46,7 @@ const News = () => {
     return (
         <div className={stile.news}>
             {showNewsPost && <PostsForm fetchInfo={fetchInfo} sendPost={sendPost}  ></PostsForm>}
-            {getNews && getNews.map((i, ind) => {
+            {posts && posts.map((i, ind) => {
                 return <Post key={i._id}
                     url={url}
                     body={i.body}

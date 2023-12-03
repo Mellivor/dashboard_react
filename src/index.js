@@ -10,7 +10,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import News from "./components/News/News";
 import Index from "./routes/index";
-
+import { PostsContextProvider } from './Context/PostsContext';
 
 
 const router = createBrowserRouter([
@@ -50,7 +50,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <PostsContextProvider>
+            <RouterProvider router={router} />
+        </PostsContextProvider>
     </React.StrictMode>
 );
 

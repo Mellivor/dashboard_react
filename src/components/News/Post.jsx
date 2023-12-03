@@ -1,7 +1,8 @@
 import stile from './Post.module.css';
 import axios from 'axios';
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
 
 export default function Posts(props) {
 
@@ -29,12 +30,14 @@ export default function Posts(props) {
 
     return (
         <div className={props.ind % 2 ? `${stile.post} ${stile.even}` : `${stile.post} ${stile.odd}`} id={props._id} data-author={props.author} >
-            {/* <div className={props.ind % 2 ? `post to` : `post ${stile.odd}`} > */}
-            <pre className={stile.post_body}>{props.body}</pre>
-            <p className={stile.auth}>{props.author}</p>
-            <div>
-                <button>Коментарі</button>
-                {props.your && <button onClick={delatePost}>Видалити</button>}
+            <div className={stile.post_top}>
+
+                <pre className={stile.post_body}>{props.body}</pre>
+                {props.your && <button className={stile.post_buttons} onClick={delatePost}>Видалити <FontAwesomeIcon icon={faTrashCan} /></button>}
+            </div>
+            <div className={stile.post_bottom}>
+                <button className={stile.post_buttons} >Коментарі <FontAwesomeIcon icon={faCommentDots} /></button>
+                <p className={stile.auth}>{props.author}</p>
             </div>
             {props.comments && props.comments.map((i, ind) => {
                 return <div key={i.id} className={ind % 2 && "iven"}>
