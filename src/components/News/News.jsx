@@ -40,7 +40,9 @@ const News = () => {
     }
 
     useEffect(() => {
-        fetchInfo();
+        if (!posts) {
+            fetchInfo();
+        }
     }, []);
 
     return (
