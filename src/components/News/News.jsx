@@ -53,7 +53,6 @@ const News = () => {
                     url={url}
                     body={i.body}
                     author={i.author}
-                    your={true}
                     ind={ind}
                     _id={i._id}
                     userid={i.userid}></Post>

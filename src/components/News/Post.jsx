@@ -3,8 +3,12 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons'
+import { useAuthContext } from '../../hook/useAuthContext';
 
 export default function Posts(props) {
+
+    const { user, dispatch } = useAuthContext()
+
 
     const delatePost = async () => {
         console.log(props._id);
@@ -31,9 +35,8 @@ export default function Posts(props) {
     return (
         <div className={props.ind % 2 ? `${stile.post} ${stile.even}` : `${stile.post} ${stile.odd}`} id={props._id} data-author={props.author} >
             <div className={stile.post_top}>
-
                 <pre className={stile.post_body}>{props.body}</pre>
-                {props.your && <button className={stile.post_buttons} onClick={delatePost}>Видалити <FontAwesomeIcon icon={faTrashCan} /></button>}
+                {(user._id === props.userid) && <button className={stile.post_buttons} onClick={delatePost}>Видалити <FontAwesomeIcon icon={faTrashCan} /></button>}
             </div>
             <div className={stile.post_bottom}>
                 <button className={stile.post_buttons} >Коментарі <FontAwesomeIcon icon={faCommentDots} /></button>
